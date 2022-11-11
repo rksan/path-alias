@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "paths": {
+      "#~/*": [
+        "./*"
+      ],
+    },
+    "lib": [
+      //"esnext",
+      //"dom",
+      //"dom.iterable",
+      //"scripthost"
+    ]
+  },
+  "include": [
+    ".",
+  ]
+}
