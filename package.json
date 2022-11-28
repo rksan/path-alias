@@ -15,6 +15,9 @@
     "url": "https://github.com/rksan/path-aliase.git"
   },
   "bugs": "https://github.com/rksan/path-aliase/issues",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "aliase",
     "path"
