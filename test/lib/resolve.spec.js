@@ -1,10 +1,11 @@
 //@ts-check
 const { describe, it } = require("mocha");
 const { assert } = require("chai");
-const nodePath = require("path");
 
+const nodePath = require("path");
 const appRootPath = require("app-root-path");
-const CRF = require("node:path").relative(appRootPath.toString(), __filename);
+
+const CRF = nodePath.relative(appRootPath.toString(), __filename);
 
 describe(`test ${CRF}`, function () {
   describe("./resolve.js", () => {
