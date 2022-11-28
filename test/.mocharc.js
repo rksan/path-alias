@@ -7,10 +7,7 @@
 
 module.exports = {
   extension: ["js", "cjs", "mjs"],
-  package: "./package.json",
+  package: `./package.json`,
   reporter: "spec",
-  spec: [
-    `${__dirname}/test/!(_)*.spec.js`,
-    `${__dirname}/test/!(_)*/!(_)*.spec.js`,
-  ], // the positional arguments!,
+  spec: [`${__dirname}/!(_)*.spec.js`, `${__dirname}/!(_)*/!(_)*.spec.js`], // the positional arguments!,
 };
