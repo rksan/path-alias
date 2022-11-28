@@ -1,6 +1,6 @@
 {
-  "name": "app-alias",
-  "version": "0.0.1",
+  "name": "path-alias",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "imports": {
@@ -9,20 +9,22 @@
     ]
   },
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha",
-    "cover": "nyc npm run test"
+    "test": "nyc mocha -R spec",
+    "precoverage-report": "rm -rf coverage && mkdir coverage",
+    "coverage-report": "npm run test && nyc report --reporter=text-lcov > ./coverage/lcov.info"
   },
   "keywords": [
     "aliase",
     "path"
   ],
   "author": "rksan",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/node": "^18.11.8",
     "app-root-path": "^3.1.0",
     "chai": "^4.3.6",
+    "coveralls": "^3.1.1",
     "mocha": "^10.1.0",
     "nyc": "^15.1.0"
   }

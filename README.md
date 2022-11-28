@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/rksan/path-aliase/badge.svg?branch=main)](https://coveralls.io/github/rksan/path-aliase?branch=main)
+
 # path-aliase
 
 任意の config file にある path-aliase プロパティを読み込み、絶対パスに解決する手助けをします。
