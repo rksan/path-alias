@@ -105,7 +105,7 @@ module.exports = defineConfig({
 
 # 更新履歴
 
-## v0.0.1
+## v0.0.2
 
 - package name を変更
 
