@@ -9,7 +9,7 @@ const CRF = nodePath.relative(appRootPath.toString(), __filename);
 
 describe(`test ${CRF}`, function () {
   describe("interface pathAliases", () => {
-    const generator = require("#~/lib/path-aliases");
+    const generator = require("#~/lib/path-alias");
 
     it("const generator", () => {
       assert.isFunction(generator);
@@ -46,7 +46,7 @@ describe(`test ${CRF}`, function () {
   });
 
   describe("default options", () => {
-    const generator = require("#~/lib/path-aliases");
+    const generator = require("#~/lib/path-alias");
 
     const pathAliases = generator();
 
@@ -75,7 +75,7 @@ describe(`test ${CRF}`, function () {
   });
 
   describe("custom options", () => {
-    const generator = require("#~/lib/path-aliases");
+    const generator = require("#~/lib/path-alias");
 
     const options = {
       appRootPath: appRootPath.toString(),
@@ -130,7 +130,7 @@ describe(`test ${CRF}`, function () {
   });
 
   describe("others", () => {
-    const generator = require("#~/lib/path-aliases");
+    const generator = require("#~/lib/path-alias");
 
     const options = {
       appRootPath: appRootPath.toString(),

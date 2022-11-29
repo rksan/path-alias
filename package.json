@@ -1,7 +1,7 @@
 {
   "name": "@rksan/path-alias",
-  "version": "0.0.1",
-  "description": "Reads the path-aliase property in any config file and helps resolve it to an absolute path.",
+  "version": "0.0.2",
+  "description": "Reads the path-alias property in any config file and helps resolve it to an absolute path.",
   "scripts": {
     "test": "nyc mocha --config='./test/.mocharc.js'",
     "precoverage-report": "rm -rf coverage && mkdir coverage",
@@ -9,17 +9,17 @@
   },
   "author": "rksan",
   "license": "MIT",
-  "homepage": "https://github.com/rksan/path-aliase#readme",
+  "homepage": "https://github.com/rksan/path-alias#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rksan/path-aliase.git"
+    "url": "https://github.com/rksan/path-alias.git"
   },
-  "bugs": "https://github.com/rksan/path-aliase/issues",
+  "bugs": "https://github.com/rksan/path-alias/issues",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "aliase",
+    "alias",
     "path"
   ],
   "main": "index.js",

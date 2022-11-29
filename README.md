@@ -1,14 +1,14 @@
 [![Coverage Status](https://coveralls.io/repos/github/rksan/path-aliase/badge.svg?branch=main)](https://coveralls.io/github/rksan/path-aliase?branch=main)
 
-# path-aliase
+# path-alias
 
-任意の config file にある path-aliase プロパティを読み込み、絶対パスに解決する手助けをします。
+任意の config file にある path-alias プロパティを読み込み、絶対パスに解決する手助けをします。
 
-例えば、 `babel.config`の`aliase`プロパティは、相対パスでの記述が推奨されますが、同パスを記述するであろう`vue.config`の`aliase`プロパティは絶対パスで記述しないと正常に動作しない場合があります。
+例えば、 `babel.config`の`alias`プロパティは、相対パスでの記述が推奨されますが、同パスを記述するであろう`vue.config`の`alias`プロパティは絶対パスで記述しないと正常に動作しない場合があります。
 
 こうした場合、２種類の config file を開発者が管理する必要がありますが、そのうち何処に設定していたのか忘れてしまうことが多々あります。
 
-そこで、module の pash aliase を任意の別ファイルで管理し、相対パスと絶対パスを相互に変換できるプラグインがあったら便利だなぁと`path-aliase`を作成しました。
+そこで、module の pash aliase を任意の別ファイルで管理し、相対パスと絶対パスを相互に変換できるプラグインがあったら便利だなぁと`path-alias`を作成しました。
 
 # インストール
 
@@ -21,12 +21,12 @@
 まず任意のファイルとして`aliases.json`を作成します。
 ファイルの名前も任意です。
 
-次に`babel.config`が保持するであろう`aliase`プロパティを記述します。内容も任意です。
+次に`babel.config`が保持するであろう`alias`プロパティを記述します。内容も任意です。
 
 ```./aliase.json
 {
   "root": [".", "./src"],
-  "aliase": {
+  "alias": {
     "~": "."
     "@": "./src"
   }
@@ -41,7 +41,7 @@
 
 ```javascript
 // 本モジュールの読み込み
-const pathAliase = require("path-aliase");
+const pathAliase = require("path-alias");
 
 // 参照する config の変更
 pathAliases.setConfig({
@@ -61,7 +61,7 @@ module.exports = {
   "plugins": [
     ["module-resolver", {
       "root": config.root,
-      "alias": config.aliase // { "~", "@" }
+      "alias": config.alias // { "~", "@" }
     }]
   ]
 
@@ -73,7 +73,7 @@ module.exports = {
 
 ```javascript
 // 本モジュールの読み込み
-const pathAliase = require("path-aliase");
+const pathAliase = require("path-alias");
 
 // 設定の変更
 pathAliases.setConfig({
@@ -104,6 +104,10 @@ module.exports = defineConfig({
 ```
 
 # 更新履歴
+
+## v0.0.1
+
+- package name を変更
 
 ## v.0.0.0
 
