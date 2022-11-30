@@ -4,7 +4,7 @@
 
 任意の config file にある path-alias プロパティを読み込み、絶対パスに解決する手助けをします。
 
-例えば、 `babel.config`の`alias`プロパティは、相対パスでの記述が推奨されますが、同パスを記述するであろう`vue.config`の`alias`プロパティは絶対パスで記述しないと正常に動作しない場合があります。
+例えば、`babel.config`の`alias`プロパティは、相対パスでの記述が推奨されますが、同パスを記述するであろう`vue.config`の`alias`プロパティは絶対パスで記述しないと正常に動作しない場合があります。
 
 こうした場合、２種類の config file を開発者が管理する必要がありますが、そのうち何処に設定していたのか忘れてしまうことが多々あります。
 
@@ -12,7 +12,9 @@
 
 # インストール
 
-> TODO : 未定(2022/11 現在)
+```bash
+npm install --save-dev @rksan/path-alias
+```
 
 # 使用方法
 
@@ -23,11 +25,13 @@
 
 次に`babel.config`が保持するであろう`alias`プロパティを記述します。内容も任意です。
 
-```./aliase.json
+### `aliase.json`
+
+```json
 {
   "root": [".", "./src"],
   "alias": {
-    "~": "."
+    "~": ".",
     "@": "./src"
   }
 }
@@ -93,7 +97,7 @@ module.exports = defineConfig({
   configureWebpack: (config) => {
     config = {
       resolve: {
-        alias: :config.alias
+        alias: config.alias  // { "~", "@" }
     };
 
     return config;
@@ -103,7 +107,17 @@ module.exports = defineConfig({
 });
 ```
 
+# LICENSE
+
+MIT
+
 # 更新履歴
+
+## v1.0.0
+
+- 正式リリース
+- install を追記
+- LICENSE を追記
 
 ## v0.0.2
 
